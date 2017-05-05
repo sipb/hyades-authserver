@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -e -u
 
 ./check_knc_creds.py authorized || exit 1
 TMPDIR=$(mktemp -d)

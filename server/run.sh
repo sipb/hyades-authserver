@@ -1,3 +1,3 @@
 #!/bin/bash
-set -e
+set -e -u
 KRB5_KTNAME=/etc/krb5.keytab knc -l 1234 ./ca.sh

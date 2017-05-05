@@ -1,3 +1,3 @@
 #!/bin/bash
-set -e
+set -e -u
 knc host@egg-sandwich.mit.edu:1234 <~/.ssh/id_rsa.pub >~/.ssh/id_rsa-cert.pub
