@@ -1,0 +1,13 @@
+[Unit]
+Description=Hyades SSH CA
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/authserver-dev
+Environment="KRB5_KTNAME=/etc/krb5.keytab"
+ExecStart=/usr/local/bin/knc -l 1234 /root/go/bin/hyades-authserver
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
